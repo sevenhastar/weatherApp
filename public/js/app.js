@@ -15,8 +15,8 @@ weatherForm.addEventListener('submit', (e)=>{
     console.log(search.value)
     messageOne.textContent = "Loading..."
     messageTwo.textContent = ''
-    fetch('http://weatherapp-env.eba-vymg37g7.us-east-1.elasticbeanstalk.com//weather?address='+search.value).then((response)=>{
-    response.json().then((data)=>{
+    fetch('http://weatherapp-env.eba-vymg37g7.us-east-1.elasticbeanstalk.com//weather?address='+search.value).then((data)=>{
+   // response.json().then((data)=>{
         if(data.error){
             console.log("Unable to find any data")
             messageOne.textContent = data.error
@@ -28,6 +28,6 @@ weatherForm.addEventListener('submit', (e)=>{
             console.log(data.forcast)
         }
         
-    })
+  //  })
 })
 })
