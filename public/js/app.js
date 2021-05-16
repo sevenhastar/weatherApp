@@ -15,7 +15,7 @@ weatherForm.addEventListener('submit', (e)=>{
     console.log(search.value)
     messageOne.textContent = "Loading..."
     messageTwo.textContent = ''
-    fetch('http://localhost:8080/weather?address='+search.value).then((response)=>{
+    fetch('http://weatherapp-env.eba-vymg37g7.us-east-1.elasticbeanstalk.com//weather?address='+search.value).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             console.log("Unable to find any data")
